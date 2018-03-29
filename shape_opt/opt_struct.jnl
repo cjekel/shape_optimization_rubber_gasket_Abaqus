@@ -1,0 +1,498 @@
+# Save by cj on 2018_03_21-15.08.37; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.08.38; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].Part(name='Part-1-failed', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].parts['Part-1-failed'].Unlock(reportWarnings=False)
+del mdb.models['Model-1'].parts['Part-1']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-1-failed', toName=
+    'Part-1')
+mdb.models['Model-1'].rootAssembly.regenerate()
+#* FeatureError: The assembly is locked and cannot be regenerated.
+# Save by cj on 2018_03_21-15.09.03; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].DistanceDimension(entity1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[17], entity2=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[5], textPoint=(
+    0.0136911645531654, 0.0241085384041071), value=0.0126)
+mdb.models['Model-1'].sketches['__edit__'].DistanceDimension(entity1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[11], entity2=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[13], textPoint=(
+    0.0439834669232368, 0.0417440645396709), value=0.0126)
+mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+# Save by cj on 2018_03_21-15.13.06; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].ObliqueDimension(textPoint=(
+    0.0318729169666767, -0.00198059529066086), value=0.063, vertex1=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[38], vertex2=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[39])
+mdb.models['Model-1'].sketches['__edit__'].ObliqueDimension(textPoint=(
+    -0.0057627260684967, 0.00589651986956596), value=0.0157, vertex1=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[40], vertex2=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[41])
+mdb.models['Model-1'].sketches['__edit__'].ObliqueDimension(textPoint=(
+    0.0675743967294693, 0.00629841536283493), value=0.0283, vertex1=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[36], vertex2=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[37])
+mdb.models['Model-1'].sketches['__edit__'].ObliqueDimension(textPoint=(
+    0.0624972023069859, 0.0375657342374325), value=0.0064000219308945, vertex1=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[34], vertex2=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[35])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].dimensions[7], ))
+mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+# Save by cj on 2018_03_21-15.16.35; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.16.35; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].dimensions[1], ))
+mdb.models['Model-1'].sketches['__edit__'].DistanceDimension(entity1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[11], entity2=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[33], textPoint=(
+    0.0454662069678307, 0.0438300520181656), value=0.0126)
+mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+# Save by cj on 2018_03_21-15.18.47; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.18.48; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.18.48; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[6].setValues(value=0.02)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[12].setValues(value=0.02)
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].DistanceDimension(entity1=
+    mdb.models['Model-1'].sketches['__edit__'].vertices[15], entity2=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[16], textPoint=(
+    -0.00907293520867825, 0.00670719612389803), value=0.0409)
+mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+# Save by cj on 2018_03_21-15.20.28; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[6].setValues(value=0.02)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[12].setValues(value=0.02)
+del mdb.models['Model-1'].sketches['__edit__']
+# Save by cj on 2018_03_21-15.21.43; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.21.43; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.21.44; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[6].setValues(value=0.005)
+del mdb.models['Model-1'].sketches['__edit__']
+# Save by cj on 2018_03_21-15.22.10; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.22.12; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[6].setValues(value=0.02)
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[14])
+mdb.models['Model-1'].sketches['__edit__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[17])
+mdb.models['Model-1'].sketches['__edit__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[16])
+mdb.models['Model-1'].sketches['__edit__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[15])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].dimensions[8], 
+    mdb.models['Model-1'].sketches['__edit__'].dimensions[10]))
+mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[6].setValues(value=0.02)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[12].setValues(value=0.02)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[12].setValues(value=
+    0.025)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[6].setValues(value=0.025)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[6].setValues(value=0.001)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[12].setValues(value=
+    0.001)
+del mdb.models['Model-1'].sketches['__edit__']
+# Save by cj on 2018_03_21-15.26.03; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.26.03; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.26.04; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.26.04; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-15.26.04; build 2018 2017_11_07-12.21.41 127140
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Asteria', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR CONTACT PAIR (ASSEMBLY_S_SURF-1-ASSEMBLY_SURF-5), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR CONTACT PAIR (ASSEMBLY_S_SURF-1-ASSEMBLY_S_SURF-1), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE REQUEST FOR MISES OUTPUT WILL BE REPLACED BY A REQUEST FOR S OUTPUT', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PE IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT TYPE CPS3', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PEEQ IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT TYPE CPS3', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PEMAG IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT TYPE CPS3', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PE IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT TYPE CPS4', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PEEQ IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT TYPE CPS4', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PEMAG IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT TYPE CPS4', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST LE IS NOT AVAILABLE FOR ELEMENT TYPE R2D2', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PE IS NOT AVAILABLE FOR ELEMENT TYPE R2D2', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PEEQ IS NOT AVAILABLE FOR ELEMENT TYPE R2D2', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST PEMAG IS NOT AVAILABLE FOR ELEMENT TYPE R2D2', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST S IS NOT AVAILABLE FOR ELEMENT TYPE R2D2', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE REQUEST FOR MISES OUTPUT WILL BE REPLACED BY A REQUEST FOR S OUTPUT', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST S IS NOT AVAILABLE FOR ELEMENT TYPE R2D2', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '2 nodes associated with rigid bodies have boundary conditions prescribed at nodes other than the reference node. These boundary conditions will be transferred to the associated rigid body reference node.The reference nodes and the dependent nodes have been identified in node set WarnNodeOverconBoundRB.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'Nodes belonging to 1 RIGID BODIES have boundary conditions prescribed at nodes other than the reference node. These boundary conditions indicate the rigid bodies cannot rotate about certain axes. Zero rotational boundary conditions have been added to these reference nodes.The reference nodes have been identified in node set WarnNodeOverconBoundRBRot.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'Boundary conditions are specified on inactive dof of 11 nodes. The nodes have been identified in node set WarnNodeBCInactiveDof.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': '/home/cj/Dropbox/phdWork/courseWork/2018Spring/EGM6352AdvanceFEA/HW/Project1/abaqus_work/Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Asteria', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 27.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 32768.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.05, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 1, 'stepTime': 0.05, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 3, 'iterations': 6, 'phase': STANDARD_PHASE, 
+    'equilibrium': 3})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.1, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 2, 'stepTime': 0.1, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 1, 'iterations': 4, 'phase': STANDARD_PHASE, 
+    'equilibrium': 3})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.15, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 3, 'stepTime': 0.15, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 2, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.2, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 4, 'stepTime': 0.2, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 1, 'iterations': 5, 'phase': STANDARD_PHASE, 
+    'equilibrium': 4})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.25, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 5, 'stepTime': 0.25, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 1, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 2})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.3, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 6, 'stepTime': 0.3, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 3})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.35, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 7, 'stepTime': 0.35, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 3})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.4, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 8, 'stepTime': 0.4, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 1, 'iterations': 5, 'phase': STANDARD_PHASE, 
+    'equilibrium': 4})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.45, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 9, 'stepTime': 0.45, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 3})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.5, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 10, 'stepTime': 0.5, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 3, 'iterations': 4, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.55, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 11, 'stepTime': 0.55, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 1, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 2})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 11, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.6, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 12, 'stepTime': 0.6, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 2, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 12, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.65, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 13, 'stepTime': 0.65, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 2, 'iterations': 4, 'phase': STANDARD_PHASE, 
+    'equilibrium': 2})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 13, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.7, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 14, 'stepTime': 0.7, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 2, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 14, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.75, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 15, 'stepTime': 0.75, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 2, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 15, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.8, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 16, 'stepTime': 0.8, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 4, 'phase': STANDARD_PHASE, 
+    'equilibrium': 4})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 16, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.85, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 17, 'stepTime': 0.85, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 2, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 17, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.9, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 18, 'stepTime': 0.9, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 2, 'iterations': 4, 'phase': STANDARD_PHASE, 
+    'equilibrium': 2})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 18, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.95, 'attempts': 1, 
+    'timeIncrement': 0.05, 'increment': 19, 'stepTime': 0.95, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 3, 'phase': STANDARD_PHASE, 
+    'equilibrium': 3})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 19, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 20, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 0.0499999999999997, 'increment': 20, 'stepTime': 1.0, 
+    'step': 1, 'jobName': 'Job-1', 'severe': 1, 'iterations': 3, 
+    'phase': STANDARD_PHASE, 'equilibrium': 2})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Wed Mar 21 15:28:25 2018', 
+    'jobName': 'Job-1'})
+# Save by cj on 2018_03_21-15.34.10; build 2018 2017_11_07-12.21.41 127140
+# Save by cj on 2018_03_21-16.20.28; build 2018 2017_11_07-12.21.41 127140

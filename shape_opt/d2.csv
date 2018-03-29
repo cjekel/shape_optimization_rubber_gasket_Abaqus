@@ -1,0 +1,5 @@
+ODB Name,Step,Frame,Part Instance Name,    Node Label,X,Y,Z,Section Name,Material Name,Section Point,          U-U1
+/home/cj/Dropbox/phdWork/courseWork/2018Spring/EGM6352AdvanceFEA/HW/Project1/abaqus_work/opt_demo/Job-1.odb,Step-1,Increment     20: Step Time =    1.000,"PART-1-1",            46,   50.4000E-03,   22.1000E-03,            0.,NA,NA,"",   19.7057E-06
+/home/cj/Dropbox/phdWork/courseWork/2018Spring/EGM6352AdvanceFEA/HW/Project1/abaqus_work/opt_demo/Job-1.odb,Step-1,Increment     20: Step Time =    1.000,"PART-1-1",            47,   50.4000E-03,   18.9000E-03,            0.,NA,NA,"",   181.673E-06
+/home/cj/Dropbox/phdWork/courseWork/2018Spring/EGM6352AdvanceFEA/HW/Project1/abaqus_work/opt_demo/Job-1.odb,Step-1,Increment     20: Step Time =    1.000,"PART-1-1",           392,   50.4000E-03,   19.9667E-03,            0.,NA,NA,"",   106.763E-06
+/home/cj/Dropbox/phdWork/courseWork/2018Spring/EGM6352AdvanceFEA/HW/Project1/abaqus_work/opt_demo/Job-1.odb,Step-1,Increment     20: Step Time =    1.000,"PART-1-1",           393,   50.4000E-03,   21.0333E-03,            0.,NA,NA,"",   55.7522E-06
