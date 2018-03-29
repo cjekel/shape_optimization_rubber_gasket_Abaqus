@@ -2,9 +2,13 @@ from __future__ import print_function
 import numpy as np
 import pandas as pd
 import os
-import dlib
+# import dlib
+from scipy.optimize import minimize
 
 def new_mesh_run_model(x):
+    # this function creates a new mesh, writes the abaqus input file,
+    # submits the abaqus job, then checks if the abaqus job was succesful,
+    # for a give x[0], x[1] dimmensions
     # set the state of the jobs
     success = False
     # modify the pre process template file
@@ -22,7 +26,7 @@ def new_mesh_run_model(x):
     if val ==0:
         # the mesh was a success
         # execute the job
-        val = os.system('abq2018 job=Job-1 interactive cpus=4 ask_delete=OFF > /dev/null')
+        val = os.system('abq2018 job=Job-1 interactive cpus=4 ask_delete=OFF')
         # interactive means abaqus waits for the job to finish
         # > /dev/null sends the print out to a non existant drive in order to
         # keep a clean log file
@@ -45,6 +49,10 @@ def new_mesh_run_model(x):
         return False
 
 def post_process(x):
+    # This functions runs an abaqus post processing script, which exports
+    # the the displacement of nodes and the contact pressure. The function then
+    # goes on to calculate the objective value given the results. If something
+    # goes wrong, the objective value returned will be infinity.
     # run the post_process script
     val = os.system('abaqus cae noGUI=write_res.py')
     print(val)
@@ -77,7 +85,11 @@ def post_process(x):
         # if the job wasn't succesful return inf
         return np.inf
 
+beta = []
+f = []
 def my_obj_fun(x0,x1):
+    # this is the objective function which will be optimized
+    # it has two parts, pre processing and post processing
     x = [x0,x1]
     # run the pre processing script
     success = new_mesh_run_model(x)
@@ -86,11 +98,30 @@ def my_obj_fun(x0,x1):
         obj = post_process(x)
     else:
         obj = np.inf
+    beta.append(x)
+    f.append(obj)
     return obj
 
-# run optimization using Lipschitz functions
-x,y = dlib.find_min_global(my_obj_fun,[0.003,0.003],[0.035,0.035],10)
+def my_fun(x):
+    # this is the objective function for scipy style optimization
+    obj = my_obj_fun(x[0], x[1])
+
+# # run optimization using Lipschitz functions
+# # this is the dlib MAX LIPO algo
+# x,y = dlib.find_min_global(my_obj_fun,[0.003,0.003],[0.035,0.035],10)
+
+# run this optimization using Nelder-Mead algorithm
+res = minimize(my_fun, [0.0126, 0.0126], method='Nelder-Mead', tol=None,
+ callback=None, options={'disp': True, 'maxiter': None,'maxfev': 10})
 
 print('******** OPT FOUND *******')
-print('X:', x)
-print('Y:', y)
+# LIPO results
+# print('X:', x)
+# print('Y:', y)
+
+# Nedler Mead results
+print(res)
+
+# save the function evluations
+np.save('beta_opt_history.npy',beta)
+np.save('f_opt_history.npy', f)
