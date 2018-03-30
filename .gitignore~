@@ -1,7 +1,7 @@
 # remove abaqus files
 *abaqus.rpy*
 *.SMABulk
-*Job-1.*
+Job-1.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

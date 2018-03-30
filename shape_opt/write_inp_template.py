@@ -4,13 +4,13 @@
 # Internal Version: 2017_11_07-12.21.41 127140
 # Run by cj on Wed Mar 21 17:01:12 2018
 #
-
 # from driverUtils import executeOnCaeGraphicsStartup
 # executeOnCaeGraphicsStartup()
 #: Executing "onCaeGraphicsStartup()" in the site directory ...
+import os
 from abaqus import *
 from abaqusConstants import *
-mydir = 'C:\Users\cj\Documents\shape_optimization_rubber_gasket_Abaqus\shape_opt/'
+mydir = r'C:\Users\cj\Documents\shape_optimization_rubber_gasket_Abaqus\shape_opt'
 session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=273.84375,
     height=207.680557250977)
 session.viewports['Viewport: 1'].makeCurrent()
@@ -21,7 +21,7 @@ executeOnCaeStartup()
 session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
     referenceRepresentation=ON)
 openMdb(
-    pathName=mydir+'opt_struct.cae')
+    pathName=os.path.abspath(mydir+'/opt_struct.cae'))
 #: The model database "/home/cj/Dropbox/phdWork/courseWork/2018Spring/EGM6352AdvanceFEA/HW/Project1/abaqus_work/opt_struct.cae" has been opened.
 session.viewports['Viewport: 1'].setValues(displayedObject=None)
 p = mdb.models['Model-1'].parts['Part-1']
