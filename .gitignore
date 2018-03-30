@@ -4,6 +4,11 @@
 *Job-1.*
 ..gitigonre~
 *~
+Job-1.com
+Job-1.inp
+*.npy
+beta_opt_history.npy
+f_opt_history.npy
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
