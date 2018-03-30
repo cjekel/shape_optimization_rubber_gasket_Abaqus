@@ -1,10 +1,10 @@
 # About
 
-Design a rubber gasket using shape optimization and Abaqus non-linear finite element solver. For more information read the [report](https://github.com/cjekel/shape_optimization_rubber_gasket_Abaqus/raw/master/report.pdf). (Please excuse my typos -- The figures should give you a general idea of what is going on.)
+Design a rubber gasket using shape optimization and Abaqus non-linear finite element solver. For more information read the [report.pdf](https://github.com/cjekel/shape_optimization_rubber_gasket_Abaqus/raw/master/report.pdf). (clicking this link will download report.pdf) Please excuse my typos -- The figures should give you a general idea of what is going on.
 
 # Information
 
-This library is working on both Windows and Linux.
+This is working on both Windows and Linux.
 
 I am using the 2018 Abaqus solver with the environment variable name *abq2018*. If you have a different Abaqus solver, change [line 29](https://github.com/cjekel/shape_optimization_rubber_gasket_Abaqus/blob/master/shape_opt/optimization.py#L29) of optimization.py.
 
@@ -12,9 +12,10 @@ I am using the 2018 Abaqus solver with the environment variable name *abq2018*. 
 
 We have a parametric design as so:
 ![Parametric design](https://github.com/cjekel/shape_optimization_rubber_gasket_Abaqus/raw/master/pictures/param.png)
-where you are trying to find β0 and β1 that minimize the closure gap and contact pressure. We can use optimization to find the best β0 and β1. I used MaxLIPO algorithm described [here](http://blog.dlib.net/2017/12/a-global-optimization-algorithm-worth.html) that is implemented into the dlib library.
 
-The project is currently set up to use a scipy optimization (Nedler-Mead because of potentially discontinuity) as default. If you want to try out MaxLIPO install the dlib library and comment the dlib function of optimization.py as required.
+where you are trying to find β0 and β1 that minimize the closure gap and reduces the deviations in the contact pressure. We can use optimization to find the best β0 and β1. I used MaxLIPO algorithm described [here](http://blog.dlib.net/2017/12/a-global-optimization-algorithm-worth.html) that is implemented into the dlib library.
+
+The project is currently set up to use a scipy optimization (Nedler-Mead because of potentially discontinuity) as default. If you want to try out MaxLIPO install the dlib library and uncomment the dlib functions of optimization.py.
 
 The processes required to evaluate the objective function:
 1. Open Abaqus sketch and change dimmensions.
