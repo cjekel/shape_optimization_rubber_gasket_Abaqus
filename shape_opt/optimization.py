@@ -93,6 +93,7 @@ f = []
 def my_obj_fun(x0,x1):
     # this is the objective function which will be optimized
     # it has two parts, pre processing and post processing
+    # this style objective function is for the dlib libary
     x = [x0,x1]
     # run the pre processing script
     success = new_mesh_run_model(x)
