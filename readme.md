@@ -6,6 +6,8 @@ Design a rubber gasket using shape optimization and Abaqus non-linear finite ele
 
 This is working on both Windows and Linux.
 
+You need Python installed to run this project. If you are new to Python, install [Anaconda](https://www.anaconda.com/download/#linux).
+
 I am using the 2018 Abaqus solver with the environment variable name *abq2018*. If you have a different Abaqus solver, change [line 29](https://github.com/cjekel/shape_optimization_rubber_gasket_Abaqus/blob/master/shape_opt/optimization.py#L29) of optimization.py.
 
 # How it works
