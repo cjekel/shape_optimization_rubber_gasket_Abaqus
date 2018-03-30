@@ -2,6 +2,8 @@
 *abaqus.rpy*
 *.SMABulk
 *Job-1.*
+..gitigonre~
+*~
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
