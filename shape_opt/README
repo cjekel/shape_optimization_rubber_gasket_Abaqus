@@ -1,5 +1,5 @@
 How to run:
 
-1) python write_current_dir.py
-2) python optimization_record.py
+1) `python write_current_dir.py`
+2) `python optimization_record.py`
 3) profit
