@@ -1,0 +1,29 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[6].setValues(value=
+    0.013348125)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[12].setValues(value=
+    0.00614249999999999)
+mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].parts['Part-1'].regenerate()
+#* FeatureError: Regeneration failed

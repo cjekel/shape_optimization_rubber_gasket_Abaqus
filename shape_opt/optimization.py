@@ -79,8 +79,11 @@ def post_process(x):
         p = p.astype(np.float)
         pstd = np.nanstd(p) # from initial = 5188183.430865008
         print('var:', x)
-        print('obj:',d,pstd)
-        return (d / 0.010154547785833336) + (pstd /8341533.54401)
+        print('Gap distance:', d)
+        print('Standard devation contact pressure:', pstd)
+        obj = (d / 0.010154547785833336) + (pstd /8341533.54401)
+        print('obj:', obj)
+        return obj
     else:
         # if the job wasn't succesful return inf
         return np.inf
@@ -105,6 +108,7 @@ def my_obj_fun(x0,x1):
 def my_fun(x):
     # this is the objective function for scipy style optimization
     obj = my_obj_fun(x[0], x[1])
+    return obj
 
 # # run optimization using Lipschitz functions
 # # this is the dlib MAX LIPO algo
@@ -112,7 +116,7 @@ def my_fun(x):
 
 # run this optimization using Nelder-Mead algorithm
 res = minimize(my_fun, [0.0126, 0.0126], method='Nelder-Mead', tol=None,
- callback=None, options={'disp': True, 'maxiter': None,'maxfev': 10})
+ callback=None, options={'disp': True, 'maxiter': None,'maxfev': 20})
 
 print('******** OPT FOUND *******')
 # LIPO results

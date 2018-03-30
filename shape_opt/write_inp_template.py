@@ -10,7 +10,7 @@
 import os
 from abaqus import *
 from abaqusConstants import *
-mydir = r'C:\Users\cj\Documents\shape_optimization_rubber_gasket_Abaqus\shape_opt'
+mydir = '/home/cj/Documents/shape_optimization_rubber_gasket_Abaqus/shape_opt'
 session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=273.84375,
     height=207.680557250977)
 session.viewports['Viewport: 1'].makeCurrent()

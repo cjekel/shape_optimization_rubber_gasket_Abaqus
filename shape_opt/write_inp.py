@@ -10,7 +10,7 @@
 import os
 from abaqus import *
 from abaqusConstants import *
-mydir = r'C:\Users\cj\Documents\shape_optimization_rubber_gasket_Abaqus\shape_opt'
+mydir = '/home/cj/Documents/shape_optimization_rubber_gasket_Abaqus/shape_opt'
 session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=273.84375,
     height=207.680557250977)
 session.viewports['Viewport: 1'].makeCurrent()
@@ -34,8 +34,8 @@ g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
 s1.setPrimaryObject(option=SUPERIMPOSE)
 p.projectReferencesOntoSketch(sketch=s1,
     upToFeature=p.features['Shell planar-1'], filter=COPLANAR_EDGES)
-d[6].setValues(value=0.0126, )
-d[12].setValues(value=0.01323, )
+d[6].setValues(value=0.013348125000000006, )
+d[12].setValues(value=0.006142499999999988, )
 s1.unsetPrimaryObject()
 p = mdb.models['Model-1'].parts['Part-1']
 p.features['Shell planar-1'].setValues(sketch=s1)
