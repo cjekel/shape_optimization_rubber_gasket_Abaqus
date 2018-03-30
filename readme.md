@@ -48,7 +48,7 @@ All of these files are located in the shape_opt folder.
 
 # How to run
 
-1. Download or clone this library.
+1. [Download](https://github.com/cjekel/shape_optimization_rubber_gasket_Abaqus/archive/master.zip) or clone this library.
 ```
 git clone https://github.com/cjekel/shape_optimization_rubber_gasket_Abaqus.git
 ```
